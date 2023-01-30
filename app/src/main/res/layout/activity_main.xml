@@ -59,7 +59,7 @@
             <EditText
                 android:numeric="integer"
                 android:id="@+id/text_size"
-                android:hint="120"
+                android:text="120"
                 android:padding="3dp"
                 android:background="@drawable/text_shape"
                 android:layout_weight="5"
