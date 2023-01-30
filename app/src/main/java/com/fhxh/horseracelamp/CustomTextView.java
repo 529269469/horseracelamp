@@ -46,13 +46,12 @@ public class CustomTextView extends TextView {
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        // TODO Auto-generated method stub
         super.onSizeChanged(w, h, oldw, oldh);
         if(mWidth == 0){
             mWidth = getMeasuredWidth();
             paint2 = getPaint();
             //颜色渐变器
-            gradient = new LinearGradient(0, 0, mWidth, 0, new int[]{Color.BLUE,Color.GREEN,Color.RED}, null, Shader.TileMode.CLAMP);
+            gradient = new LinearGradient(0, 0, mWidth, 0, new int[]{Color.YELLOW,Color.GREEN,Color.RED}, null, Shader.TileMode.CLAMP);
             paint2.setShader(gradient);
 
             matrix = new Matrix();
