@@ -33,6 +33,20 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("content",textContent)
                 val textSize = binding.textSize.text.trim().toString()
                 intent.putExtra("size",textSize.toInt())
+                intent.putExtra("type",1)
+                startActivity(intent)
+
+            }
+
+        }
+        binding.btConfirm2.setOnClickListener {
+          val textContent = binding.textContent.text.trim().toString()
+            if (textContent!=""){
+                val intent=Intent(this,MarqueeActivity::class.java)
+                intent.putExtra("content",textContent)
+                val textSize = binding.textSize.text.trim().toString()
+                intent.putExtra("size",textSize.toInt())
+                intent.putExtra("type",2)
                 startActivity(intent)
 
             }

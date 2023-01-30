@@ -32,9 +32,19 @@ class MarqueeActivity : AppCompatActivity() {
 
         val content = intent.getStringExtra("content")
         val size = intent.getIntExtra("size", 0)
+        val type = intent.getIntExtra("type", 0)
 
-        binding.marqueeContent.setTextColor(Color.RED)
-        binding.marqueeContent.text = content
+        binding.marqueeContent.isSingleLine = type==1
+
+        if (type==1){
+            binding.marqueeContent.text = content
+            binding.marqueeContent.isSingleLine=false
+        }else{
+            binding.marqueeContent.text = "    $content    "
+            binding.marqueeContent.isSingleLine=true
+            binding.marqueeContent.setTextColor(Color.RED)
+
+        }
         binding.marqueeContent.textSize = size.toFloat()
         binding.marqueeContent.requestFocus()
 

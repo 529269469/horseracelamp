@@ -70,7 +70,15 @@
 
         <Button
             android:id="@+id/bt_confirm"
-            android:text="走马灯"
+            android:text="流光"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/bt_confirm2"
+            android:text="跑马灯"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
